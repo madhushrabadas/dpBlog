@@ -46,7 +46,7 @@ const Write = () => {
       <div className="mt-16">
         <button
           onClick={handleSubmit}
-          className="bg-green-500 z-50 text-white p-2 rounded"
+          className="bg-green-50 z-50 text-white p-2 rounded"
         >
           Submit
         </button>

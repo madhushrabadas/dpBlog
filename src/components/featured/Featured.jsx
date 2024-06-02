@@ -3,7 +3,7 @@ import React from "react";
 const Featured = () => {
   return (
     <div
-      className=" p-20 py-32 bg-emerald-100
+      className=" p-20 py-32 bg- pink-100
     
     flex flex-col items-center justify-center"
     >

@@ -28,13 +28,13 @@ const SingleBlogPage = async ({ params }) => {
           <div className="title text-2xl font-bold capitalize">
             {data.title}
           </div>
-          <div className="author mt-5">{data.user.name}</div>
-          <div className="date mt-2">{data.createdAt.substring(0, 10)}</div>
+          <div className="author mt-5">{data?.user?.name}</div>
+          <div className="date mt-2">{data?.createdAt?.substring(0, 10)}</div>
         </div>
         <div className="right bg-rose-700 h-[50%]  flex-1  ">img</div>
       </div>
       <div className="  flex justify-between">
-        <div className="leftpara h-fit bg-emerald-400">
+        <div className="leftpara h-fit bg- pink-400">
           <div className="para py-4">{data.desc}</div>
           <Comments />
         </div>
