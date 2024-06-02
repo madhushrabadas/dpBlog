@@ -17,10 +17,12 @@ const SingleCard = ({ title, desc, date, img, categ, slug }) => {
             {date} - {categ}
           </div>
           <div className="title text-xl font-semibold mb-2">{title}</div>
-          <div className="desc text-gray-700  ">{desc}</div>
+          <div className="desc text-gray-700  ">
+            22{desc?.substring(0, 40)}...
+          </div>
           <Link
             href={`/blog/${slug}`}
-            className="link mt-5 text-blue-500 hover:underline cursor-pointer"
+            className="link mt-5 text-rose-900 hover:underline cursor-pointer"
           >
             Read more
           </Link>

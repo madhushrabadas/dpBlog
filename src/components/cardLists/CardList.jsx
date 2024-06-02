@@ -17,7 +17,7 @@ const getData = async (page) => {
 };
 const CardList = async ({ page }) => {
   const data = await getData(page);
-  // console.log(data);
+  console.log(data);
 
   return (
     <div className="bg-rose-300 w-full py-4">
@@ -28,9 +28,9 @@ const CardList = async ({ page }) => {
             key={item.id}
             title={item.title}
             desc={item.desc}
-            date={item.date}
+            date={item.createdAt}
             img={item.img}
-            categ={item.categ}
+            categ={item.catSlug}
             slug={item.slug}
           />
         ))}
