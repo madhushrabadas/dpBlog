@@ -13,3 +13,5 @@ NEXTAUTH_SECRET = madhu
    npm install prisma --save-dev
 2. running - npm install @prisma/client @auth/prisma-adapter
    npm install prisma --save-dev -->
+
+<!-- 3. prisma studio - npx prisma studio  -->
