@@ -20,11 +20,6 @@ const navData = [
     path: "/blog",
   },
   {
-    id: 5,
-    name: "write",
-    path: "/write",
-  },
-  {
     id: 4,
     name: "Blog Page",
     path: "/blog/:slugg",
