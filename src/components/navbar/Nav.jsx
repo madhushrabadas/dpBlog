@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -30,6 +31,9 @@ const navData = [
 ];
 
 const Nav = () => {
+  const logout = () => {
+    console.log("logout");
+  };
   return (
     <div className="bg-rose-200 text-rose-800 flex justify-between items-center p-4 px-20">
       <Link href={"/"} className="left">
@@ -41,6 +45,9 @@ const Nav = () => {
             <a href={user.path}>{user.name}</a>
           </li>
         ))}
+        <div onClick={logout} className="p">
+          logout
+        </div>
       </div>
     </div>
   );
