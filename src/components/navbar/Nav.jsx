@@ -33,6 +33,7 @@ const navData = [
 const Nav = () => {
   const logout = () => {
     console.log("logout");
+    console.log("logout");
   };
   return (
     <div className="bg-rose-200 text-rose-800 flex justify-between items-center p-4 px-20">
