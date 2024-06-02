@@ -1,6 +1,7 @@
+import Link from "next/link";
 import React from "react";
 
-const SingleCard = ({ title, desc, date, img, categ }) => {
+const SingleCard = ({ title, desc, date, img, categ, slug }) => {
   return (
     <div className="border p-4 my-3 shadow-lg rounded-lg bg-white  w-full ">
       <div className="flex">
@@ -17,9 +18,12 @@ const SingleCard = ({ title, desc, date, img, categ }) => {
           </div>
           <div className="title text-xl font-semibold mb-2">{title}</div>
           <div className="desc text-gray-700  ">{desc}</div>
-          <div className="link mt-5 text-blue-500 hover:underline cursor-pointer">
+          <Link
+            href={`/blog/${slug}`}
+            className="link mt-5 text-blue-500 hover:underline cursor-pointer"
+          >
             Read more
-          </div>
+          </Link>
         </div>
       </div>
     </div>

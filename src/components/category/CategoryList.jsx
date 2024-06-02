@@ -12,11 +12,11 @@ const getData = async () => {
 };
 
 const CategoryList = async () => {
-  const blogs = await getData();
-  console.log(blogs);
+  const categorys = await getData();
+  // console.log(categorys);
   return (
     <div className="flex bg-rose-800 p-4 px-20 w-full justify-between gap-6 text-white">
-      {blogs.map((i) => (
+      {categorys.map((i) => (
         <div className="flex cursor-pointer border rounded-xl bg-rose-100/40 p-3 w-full'">
           {" "}
           {i?.title}

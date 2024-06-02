@@ -2,40 +2,28 @@ import React from "react";
 import Pagination from "../pagination/Pagination";
 import SingleCard from "./SingleCard";
 
-// data.js
-const data = [
-  {
-    id: 1,
-    title: "First Blog Post",
-    desc: "This is the description of the first blog post.",
-    date: "2024-06-01",
-    img: "https://via.placeholder.com/150",
-    categ: "Technology",
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    desc: "This is the description of the second blog post.",
-    date: "2024-06-02",
-    img: "https://via.placeholder.com/150",
-    categ: "Lifestyle",
-  },
-  {
-    id: 3,
-    title: "Third Blog Post",
-    desc: "This is the description of the third blog post.",
-    date: "2024-06-03",
-    img: "https://via.placeholder.com/150",
-    categ: "Technology",
-  },
-];
+const getData = async (page) => {
+  const res = await fetch(
+    `${process.env.NEXTAUTH_URL}/api/blogposts?page=${page}`,
+    {
+      cache: "no-store",
+    }
+  );
+  if (!res.ok) {
+    throw new Error("cate issues");
+  }
+  console.log(res);
+  return res.json();
+};
+const CardList = async ({ page }) => {
+  const data = await getData(page);
+  // console.log(data);
 
-const CardList = () => {
   return (
     <div className="bg-rose-300 w-full py-4">
       <div>CardList</div>
       <div className="pagination">
-        {data.slice(0, 2).map((item) => (
+        {data.posts.map((item) => (
           <SingleCard
             key={item.id}
             title={item.title}
@@ -43,6 +31,7 @@ const CardList = () => {
             date={item.date}
             img={item.img}
             categ={item.categ}
+            slug={item.slug}
           />
         ))}
         <Pagination />
