@@ -43,10 +43,10 @@ const Write = () => {
           placeholder="Tell your story..."
         />
       </div>
-      <div className="mt-8">
+      <div className="mt-16">
         <button
           onClick={handleSubmit}
-          className="bg-green-500 text-white p-2 rounded"
+          className="bg-green-500 z-50 text-white p-2 rounded"
         >
           Submit
         </button>
