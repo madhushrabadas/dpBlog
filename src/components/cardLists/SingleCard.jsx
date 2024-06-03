@@ -3,7 +3,7 @@ import React from "react";
 
 const SingleCard = ({ title, desc, date, img, categ, slug }) => {
   return (
-    <div className="border p-4 my-3 shadow-lg rounded-lg bg-white  w-full ">
+    <div className="  p-4 my-5 shadow-lg bg-pink-50  w-full ">
       <div className="flex">
         <div className="left flex-1 mr-4 h-[14rem] w-[12rem] ">
           <img
@@ -13,16 +13,17 @@ const SingleCard = ({ title, desc, date, img, categ, slug }) => {
           />
         </div>
         <div className="right flex-1">
-          <div className="timecat text-gray-500   mb-2">
-            {date} - {categ}
+          <div className="timecat text-rose-800   mb-2">
+            {date.substring(0, 10)} -{" "}
+            <p className="font-bold capitalize">{categ}</p>
           </div>
           <div className="title text-xl font-semibold mb-2">{title}</div>
-          <div className="desc text-gray-700  ">
-            22{desc?.substring(0, 40)}...
+          <div className="desc mb-6 text-gray-700  ">
+            {desc?.substring(0, 70)}...
           </div>
           <Link
             href={`/blog/${slug}`}
-            className="link mt-5 text-rose-900 hover:underline cursor-pointer"
+            className="link mt-8 bg-rose-900 text-white p-2 hover:underline cursor-pointer"
           >
             Read more
           </Link>

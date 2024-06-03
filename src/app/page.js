@@ -10,7 +10,7 @@ export default function Home({ searchParams }) {
     <>
       <Featured />
       <CategoryList />
-      <div className="flex justify-between px-20 gap-4 bg-rose-100 ">
+      <div className="flex justify-between px-20 gap-4 ">
         <div className="w-[70%]">
           <CardList page={page} />
         </div>

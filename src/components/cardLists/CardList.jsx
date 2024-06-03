@@ -20,9 +20,9 @@ const CardList = async ({ page }) => {
   console.log(data);
 
   return (
-    <div className="bg-rose-300 w-full py-4">
-      <div>CardList</div>
-      <div className="pagination">
+    <div className=" w-full py-4">
+      <div className="text-xl font-bold text-rose-700"> Recent Blogs</div>
+      <div className="">
         {data.posts.map((item) => (
           <SingleCard
             key={item.id}

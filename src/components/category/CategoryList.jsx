@@ -15,9 +15,9 @@ const CategoryList = async () => {
   const categorys = await getData();
   // console.log(categorys);
   return (
-    <div className="flex bg-rose-800 p-4 px-20 w-full justify-between gap-6 text-white">
+    <div className="flex bg-rose-700 p-4 px-40 w-full justify-between gap-6 text-white">
       {categorys.map((i) => (
-        <div className="flex cursor-pointer border rounded-xl bg-rose-100/40 p-3 w-full'">
+        <div className="flex cursor-pointer shadow-lg capitalize bg-white text-rose-900/90 p-3 w-full'">
           {" "}
           {i?.title}
         </div>

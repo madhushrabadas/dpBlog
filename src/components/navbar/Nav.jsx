@@ -5,24 +5,9 @@ import React from "react";
 
 const navData = [
   {
-    id: 1,
-    name: "About",
-    path: "/about",
-  },
-  {
-    id: 2,
-    name: "Contact",
-    path: "/contact",
-  },
-  {
     id: 3,
     name: "Blog",
     path: "/blog",
-  },
-  {
-    id: 4,
-    name: "Blog Page",
-    path: "/blog/:slugg",
   },
 ];
 
@@ -30,9 +15,9 @@ const Nav = () => {
   const { status } = useSession();
   console.log(status);
   return (
-    <div className="bg-rose-200 text-rose-800 flex justify-between items-center p-4 px-20">
-      <Link href={"/"} className="left">
-        logo
+    <div className="text-rose-100 bg-rose-800 flex justify-between items-center p-4 px-20">
+      <Link href={"/"} className="left italic font-bold text-xl">
+        Madhushrabas Blog
       </Link>
       <div className="right flex  items-center justify-between gap-3">
         {navData.map((user) => (
@@ -45,7 +30,7 @@ const Nav = () => {
         ) : (
           <>
             <Link href="/write">Write</Link>
-            <span onClick={signOut} className="flex p-2 bg-rose-50">
+            <span onClick={signOut} className="flex p-2 text-rose-50">
               Logout
             </span>
           </>

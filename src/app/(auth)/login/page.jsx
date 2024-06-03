@@ -17,7 +17,7 @@ const page = () => {
   }
 
   return (
-    <div className="bg-rose-700 text-white h-[60vh] flex  items-center justify-center ">
+    <div className="bg-pink-100 h-screen text-white h-[60vh] flex  items-center justify-center ">
       <div
         onClick={() => signIn("google")}
         className="bg-blue-400 p-2 rounded-lg capitalize cursor-pointer"

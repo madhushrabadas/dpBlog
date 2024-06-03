@@ -4,7 +4,8 @@ import SideItem from "./SideItem";
 const data = [
   {
     id: 1,
-    title: "First Blog Post",
+    title:
+      "First Blog dfcfgv hfdghfbdhfchfhb vfhchvfhfbhfch h sr hdfedhxfhcghbdyvhrgfdh",
     desc: "This is the description of the first blog post.",
     date: "2024-06-01",
     img: "https://via.placeholder.com/150",
@@ -55,7 +56,7 @@ const data = [
 const SideMenu = ({ dataToShow }) => {
   return (
     <div className=" w-full p-4 h-full ">
-      <div className="p">Popular categories</div>
+      <div className="text-xl font-bold text-rose-700">Popular categories</div>
       {data.slice(0, dataToShow).map((item) => (
         <SideItem
           key={item.id}
