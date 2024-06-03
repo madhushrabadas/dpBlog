@@ -1,7 +1,10 @@
-import Write from "@/components/writepage/Write";
-import React from "react";
+import dynamic from "next/dynamic";
 
-const page = () => {
+const Write = dynamic(() => import("@/components/writepage/Write"), {
+  ssr: false,
+});
+
+const Writepage = () => {
   return (
     <div>
       <Write />
@@ -9,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Writepage;

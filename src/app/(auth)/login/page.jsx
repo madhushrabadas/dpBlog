@@ -3,7 +3,7 @@ import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const page = () => {
+const Loginpage = () => {
   const { data, status } = useSession();
   const router = useRouter();
 
@@ -17,7 +17,7 @@ const page = () => {
   }
 
   return (
-    <div className="bg-pink-100 h-screen text-white h-[60vh] flex  items-center justify-center ">
+    <div className="bg-pink-100  text-white h-[90vh] flex  items-center justify-center ">
       <div
         onClick={() => signIn("google")}
         className="bg-blue-400 p-2 rounded-lg capitalize cursor-pointer"
@@ -28,4 +28,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Loginpage;

@@ -16,9 +16,11 @@ const CategoryList = async () => {
   // console.log(categorys);
   return (
     <div className="flex bg-rose-700 p-4 px-40 w-full justify-between gap-6 text-white">
-      {categorys.map((i) => (
-        <div className="flex cursor-pointer shadow-lg capitalize bg-white text-rose-900/90 p-3 w-full'">
-          {" "}
+      {categorys.map((i, idx) => (
+        <div
+          key={idx}
+          className="flex cursor-pointer shadow-lg capitalize bg-white text-rose-900/90 p-3 w-full'"
+        >
           {i?.title}
         </div>
       ))}

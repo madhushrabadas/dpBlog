@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -6,7 +7,9 @@ const SingleCard = ({ title, desc, date, img, categ, slug }) => {
     <div className="  p-4 my-5 shadow-lg bg-pink-50  w-full ">
       <div className="flex">
         <div className="left flex-1 mr-4 h-[14rem] w-[12rem] ">
-          <img
+          <Image
+            width={100}
+            height={100}
             src={img}
             alt={title}
             className="w-full h-full object-cover rounded-lg"
