@@ -18,35 +18,35 @@ const Write = () => {
   };
 
   return (
-    <div className="bg-pink-200 p-4 h-[80vh] px-20">
-      <div className="title my-3">
+    <div className=" p-4 min-h-[80vh] bg-pink-100 px-20">
+      <div className="title  my-3">
         <input
           type="text"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-2"
+          className="w-full text-rose-800 p-2"
         />
       </div>
-      <div className="buttoncomps bg-sky-300">
-        <button onClick={openMenus} className="p-2 m-2 border">
+      <div className="buttoncomps ">
+        <button onClick={openMenus} className="p-2 my-4 border border-rose-800">
           +
         </button>
-        {openPlus && <>hehy</>}
+        {openPlus && <>hey</>}
       </div>
       <div className="h-fit bg-yellow-400">
         <ReactQuill
-          className="bg-rose-700 text-white h-[12rem] text-2xl"
+          className="bg-white text-rose-800 h-full text-2xl"
           theme="snow"
           value={value}
           onChange={setValue}
           placeholder="Tell your story..."
         />
       </div>
-      <div className="mt-16">
+      <div className="mt-6 mb-12">
         <button
           onClick={handleSubmit}
-          className="bg-green-500 z-50 text-white p-2 rounded"
+          className="bg-green-50  text-rose-800 p-2 rounded"
         >
           Submit
         </button>

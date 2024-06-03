@@ -1,50 +1,28 @@
 import React from "react";
 
-const blogs = [
-  {
-    id: 1,
-    title: "First Blog Post",
-    content: "This is the content of the first blog post.",
-    category: "Technology",
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    content: "This is the content of the second blog post.",
-    category: "Lifestyle",
-  },
-  {
-    id: 3,
-    title: "Third Blog Post",
-    content: "This is the content of the third blog post.",
-    category: "Technology",
-  },
-  {
-    id: 1,
-    title: "First Blog Post",
-    content: "This is the content of the first blog post.",
-    category: "Technology",
-  },
-  {
-    id: 2,
-    title: "Second Blog Post",
-    content: "This is the content of the second blog post.",
-    category: "Lifestyle",
-  },
-  {
-    id: 3,
-    title: "Third Blog Post",
-    content: "This is the content of the third blog post.",
-    category: "Technology",
-  },
-  // Add more blog posts here
-];
+const getData = async () => {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/categories`, {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("cate issues");
+  }
+  console.log(res);
+  return res.json();
+};
 
-const CategoryList = () => {
+const CategoryList = async () => {
+  const categorys = await getData();
+  // console.log(categorys);
   return (
-    <div className="flex bg-rose-600 p-4 px-20 w-full justify-between gap-6 text-white">
-      {blogs.map((i) => (
-        <div className="flex  border p-3 w-full'"> {i.category}</div>
+    <div className="flex bg-rose-700 p-4 px-40 w-full justify-between gap-6 text-white">
+      {categorys.map((i, idx) => (
+        <div
+          key={idx}
+          className="flex cursor-pointer shadow-lg capitalize bg-white text-rose-900/90 p-3 w-full'"
+        >
+          {i?.title}
+        </div>
       ))}
     </div>
   );

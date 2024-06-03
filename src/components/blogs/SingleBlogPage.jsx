@@ -14,7 +14,7 @@ const SingleBlogPage = () => {
         <div className="right bg-rose-700 h-[50%]  flex-1  ">img</div>
       </div>
       <div className="  flex justify-between">
-        <div className="leftpara h-fit bg-emerald-400">
+        <div className="leftpara h-fit bg- pink-400">
           <div className="para py-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga,
             sapiente non. Libero iste non, tempora dolorum maxime temporibus nam
